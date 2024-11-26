@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vCard Download</title>
+    <!-- TailwindCSS and DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            },
+            plugins: [require('daisyui')],
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="card shadow-xl bg-white p-6 w-full max-w-md">
+        <div class="card-body">
+            <!-- Profile Information -->
+            <div class="flex items-center gap-4 mb-6">
+                <img src="https://via.placeholder.com/100" alt="Profile" class="rounded-full border w-24 h-24">
+                <div>
+                    <h1 class="text-2xl font-bold">John Doe</h1>
+                    <p class="text-sm text-gray-500">Software Engineer at Example Company</p>
+                </div>
+            </div>
+            <hr class="my-4">
+
+            <!-- Contact Information -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                    <span class="font-bold">Phone:</span>
+                    <a href="tel:+1234567890" class="link link-primary">(123) 456-7890</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="font-bold">Email:</span>
+                    <a href="mailto:johndoe@example.com" class="link link-primary">johndoe@example.com</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="font-bold">Address:</span>
+                    <span>123 Example St., Example City, CA, 12345</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="font-bold">Website:</span>
+                    <a href="https://www.example.com" class="link link-primary">www.example.com</a>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- vCard Download Button -->
+            <a href="contact.vcf" download="John_Doe.vcf" class="btn btn-primary w-full">
+                Download vCard
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
